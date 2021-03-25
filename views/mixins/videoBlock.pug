@@ -2,7 +2,8 @@
 mixin videoBlock(video = {})
    <!--mixin을 선언 한 후 함수가 호출 될때 마다 불러올 html을 작성함-->
     .videoBlock
-        video.videoBlock__thumbnail(src=video.videoFile ,controls="true")
-        //-db에 video 의 url만 저장하고 html 문서에서 video tag를 쓴다. 
-        h4.videoBlock__title=video.title
-        h6.videoBlock__views=video.views
+        a(href=routes.videoDetail(video.id))
+            video.videoBlock__thumbnail(src=video.videoFile ,controls="true")
+            //-db에 video 의 url만 저장하고 html 문서에서 video tag를 쓴다. 
+            h4.videoBlock__title=video.title
+            h6.videoBlock__views=video.views
