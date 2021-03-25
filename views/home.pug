@@ -1,0 +1,12 @@
+extends layouts/main.pug
+include mixins/videoBlock
+
+block content   
+    .video 
+        each video in videos 
+            <!--mixin함수 호출 및 함수내부 변수 정의-->
+            +videoBlock({
+                videoFile: video.videoFile,
+                title:video.title,
+                views:video.views
+            })

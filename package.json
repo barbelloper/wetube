@@ -1,14 +1,34 @@
 {
   "name": "wetube",
   "version": "1.0.0",
-  "description": "Cloning Youtube with Vanilla and NodeJS",
-  "main": "index.js",
+  "description": "Cloning Youtube with Vanilla and NodeJs",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node init.js"
   },
-  "author": "YOUNGJUN",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbelloper/wetube.git"
+  },
+  "author": "youngjun",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barbelloper/wetube/issues"
+  },
+  "homepage": "https://github.com/barbelloper/wetube#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
